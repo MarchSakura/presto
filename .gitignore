@@ -1,0 +1,10 @@
+lib/
+src/
+
+download/*.tar.gz
+download/tempo
+
+presto-3.0.1/TestData1/
+presto-3.0.1/TestData2/
+presto-3.0.1/docs/
+presto-3.0.1/examplescripts
