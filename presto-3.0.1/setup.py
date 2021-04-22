@@ -15,6 +15,8 @@ extra_compile_args = ["-DUSEFFTW"]
 include_dirs = [numpy.get_include()]
 include_dirs.append(os.environ["FFTW_LIB"])
 include_dirs.append(os.environ["FFTW_LIB"])
+include_dirs.append(os.environ["FFTW_LIB"])
+include_dirs.append(os.environ["FFTW_LIB"])
 # For MacOS with MacPorts use the following
 # include_dirs.append("/opt/local/include")
 
@@ -25,6 +27,8 @@ ppgplot_library_dirs = ["/usr/X11R6/lib"]
 
 presto_libraries = ["presto", "fftw3f", "m"]
 presto_library_dirs = []
+presto_library_dirs.append(os.environ["FFTW_LIB"])
+presto_library_dirs.append(os.environ["FFTW_LIB"])
 presto_library_dirs.append(os.environ["FFTW_LIB"])
 presto_library_dirs.append(os.environ["FFTW_LIB"])
 

@@ -28,8 +28,8 @@ export PATH=$PATH:$PRESTO/bin:$TEMPO/src
 
 #echo `pwd`
 #echo "start run GBT"
-#cd $PRESTO/TestData1
-#(time python ./pipeline.py GBT_Lband_PSR.fil) > log 2>&1
+cd $PRESTO/TestData1
+(time python ./pipeline.py GBT_Lband_PSR.fil) > log.$NOW_TIME 2>&1
 #echo "finish run GBT"
 #
 cd $PRESTO/TestData2

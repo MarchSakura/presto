@@ -1,5 +1,6 @@
 lib/
 src/
+intel/
 
 download/*.tar.gz
 download/tempo
