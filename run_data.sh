@@ -30,14 +30,16 @@ export PATH=$PATH:$PRESTO/bin:$TEMPO/src
 #echo `pwd`
 echo "start run GBT"
 cd $PRESTO/TestData1
-(time python ./pipeline.py GBT_Lband_PSR.fil) > log.`now` 2>&1
+#(time python ./pipeline.py GBT_Lband_PSR.fil) > log.`now` 2>&1
+(time python ./lqq_pipeline.py GBT_Lband_PSR.fil) > log.lqq_pipe.`now` 2>&1
 cd -
 echo "finish run GBT"
 #
 #echo `pwd`
 echo "start run Dec"
 cd $PRESTO/TestData2
-(time python ./pipeline.py Dec+1554_arcdrift+23.4-M12_0194.fil) > log.`now` 2>&1
+#(time python ./pipeline.py Dec+1554_arcdrift+23.4-M12_0194.fil) > log.`now` 2>&1
+(time python ./lqq_pipeline.py Dec+1554_arcdrift+23.4-M12_0194.fil) > log.lqq_pipe.`now` 2>&1
 cd -
 echo "finish run Dec"
 #
