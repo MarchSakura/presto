@@ -27,6 +27,9 @@ sed -i '\%pkg-config --libs%s/pkg-config/PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 pkg-conf
 make clean
 make makewisdom
 make
+
+echo -e "\033[41;36m presto source make finish. \033[0m"
+
 cd $PRESTO/python/presto
 sed -i '\%from presto%s/from presto //' filterbank.py
 sed -i '\%from presto%s/from presto\./from /' sigproc.py
@@ -37,3 +40,5 @@ sed -i '/^include_dirs =/ainclude_dirs.append(os.environ\["FFTW_LIB"\])' setup.p
 sed -i '/^presto_library_dirs =/apresto_library_dirs.append(os.environ\["FFTW_LIB"\])' setup.py
 # python2 setup.py config --compiler=intelem --fcompiler=intelem build_clib --compiler=intelem build_ext --inplace --fcompiler=intelem --compiler=intelem
 pip install .
+
+echo -e "\033[41;36m pip install presto finish. \033[0m"

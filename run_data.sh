@@ -1,4 +1,6 @@
 #!/usr/bin/bash
+shopt -s expand_aliases
+alias now='date +%Y-%m-%d,%H:%M:%S'
 
 export BUILD_PATH=$PWD
 
@@ -25,18 +27,19 @@ export PATH=$PATH:$PRESTO/bin:$TEMPO/src
 # cd $PRESTO/FAST_ALL
 # (time python ./time_pipeline.py J0631+4147_tracking_all.fits) > log.serial 2>&1
 
-
 #echo `pwd`
-#echo "start run GBT"
+echo "start run GBT"
 cd $PRESTO/TestData1
-(time python ./pipeline.py GBT_Lband_PSR.fil) > log.$NOW_TIME 2>&1
-#echo "finish run GBT"
+(time python ./pipeline.py GBT_Lband_PSR.fil) > log.`now` 2>&1
+cd -
+echo "finish run GBT"
 #
-cd $PRESTO/TestData2
 #echo `pwd`
-#echo "start run Dec"
-(time python ./pipeline.py Dec+1554_arcdrift+23.4-M12_0194.fil) > log.$NOW_TIME 2>&1
-#echo "finish run Dec"
+echo "start run Dec"
+cd $PRESTO/TestData2
+(time python ./pipeline.py Dec+1554_arcdrift+23.4-M12_0194.fil) > log.`now` 2>&1
+cd -
+echo "finish run Dec"
 #
 #cd $PRESTO/FAST
 #echo `pwd`

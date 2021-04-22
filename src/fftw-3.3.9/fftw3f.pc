@@ -1,0 +1,11 @@
+prefix=/home/hjw/program/presto/lib/fftw-3.3.9/gcc-pure
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: FFTW
+Description: fast Fourier transform library
+Version: 3.3.9
+Libs: -L${libdir} -lfftw3f 
+Libs.private: -lm
+Cflags: -I${includedir}
