@@ -1,0 +1,16 @@
+Package x11 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `x11.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'x11' found
+Package libpng was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libpng.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libpng' found
+Package glib-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glib-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glib-2.0' found
+Package glib-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glib-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glib-2.0' found

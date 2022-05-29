@@ -1025,7 +1025,7 @@ griv00.o : $(DRVDIR)/gadef.h $(DRVDIR)/gmdef.h $(DRVDIR)/gphdef.h
 grivas.o : $(DRVDIR)/gadef.h
 grtv00.o : $(DRVDIR)/imdef.h
 pgxwin.o : $(DRVDIR)/pgxwin.h
-pndriv.o : ./png.h ./pngconf.h ./zlib.h ./zconf.h
+# pndriv.o : ./png.h ./pngconf.h ./zlib.h ./zconf.h
 
 x2driv.o figdisp_comm.o: $(DRVDIR)/commands.h
 
@@ -1052,7 +1052,7 @@ libcpgplot.a cpgplot.h: $(PG_SOURCE) pgbind
 
 cpgdemo: cpgplot.h $(SRC)/cpg/cpgdemo.c libcpgplot.a
 	$(CCOMPL) $(CFLAGD) -c -I. $(SRC)/cpg/cpgdemo.c
-	$(FCOMPL) -o cpgdemo cpgdemo.o $(CPGPLOT_LIB) $(LIBS)
+	$(FCOMPL) -nofor_main -o cpgdemo cpgdemo.o $(CPGPLOT_LIB) $(LIBS)
 	rm -f cpgdemo.o
 
 pgmdemo: pgmdemo.o libXmPgplot.a

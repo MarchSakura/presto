@@ -1,0 +1,98 @@
+icc -I/gs/home/lqq/presto-3.0.1/include  -I/gs/home/lqq/cfitsio/icc_version/include   -I/gs/home/lqq/pgplot -I/gs/home/lqq/fftw/fftw_pure_512/include   -DUSEMMAP -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -Wall -W -fPIC -O3 -ffast-math -qopenmp -o makewisdom makewisdom.c -L/gs/home/lqq/fftw/fftw_pure_512/lib -lfftw3f  
+./makewisdom
+
+Attempting to read the system wisdom file...
+  failed.  The file probably does not exist.  Tell your sysadmin.
+
+Creating Wisdom for FFTW.
+This may take a while...
+
+Generating plans for FFTs of length:
+   2 forward
+   2 backward
+   2 real-to-complex
+   4 forward
+   4 backward
+   4 real-to-complex
+   8 forward
+   8 backward
+   8 real-to-complex
+   16 forward
+   16 backward
+   16 real-to-complex
+   32 forward
+   32 backward
+   32 real-to-complex
+   64 forward
+   64 backward
+   64 real-to-complex
+   128 forward
+   128 backward
+   128 real-to-complex
+   256 forward
+   256 backward
+   256 real-to-complex
+   512 forward
+   512 backward
+   512 real-to-complex
+   1024 forward
+   1024 backward
+   1024 real-to-complex
+   2048 forward
+   2048 backward
+   2048 real-to-complex
+   4096 forward
+   4096 backward
+   4096 real-to-complex
+   8192 forward
+   8192 backward
+   8192 real-to-complex
+   16384 forward
+   16384 backward
+   16384 real-to-complex
+   32768 forward
+   32768 backward
+   32768 real-to-complex
+   65536 forward
+   65536 backward
+   65536 real-to-complex
+   10 forward
+   10 backward
+   100 forward
+   100 backward
+   1000 forward
+   1000 backward
+   10000 forward
+   10000 backward
+   100000 forward
+   100000 backward
+   192 forward
+   192 backward
+   288 forward
+   288 backward
+   384 forward
+   384 backward
+   540 forward
+   540 backward
+   768 forward
+   768 backward
+   1080 forward
+   1080 backward
+   1280 forward
+   1280 backward
+   2100 forward
+   2100 backward
+   4200 forward
+   4200 backward
+   5120 forward
+   5120 backward
+   7680 forward
+   7680 backward
+   8232 forward
+   8232 backward
+   10240 forward
+   10240 backward
+Exporting wisdom to 'fftw_wisdom.txt'
+Done.
+
+cp fftw_wisdom.txt /gs/home/lqq/presto-3.0.1/lib
